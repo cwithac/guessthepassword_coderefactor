@@ -34,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     wordList.addEventListener('click', updateGame);
   }
 
-  function getRandomValues(array, numberOfVals) {
-    return shuffle(array).slice(0, numberOfVals);
-  }
+  const getRandomValues = (array, numberOfVals=wordCount) => shuffle(array).slice(0, numberOfVals);
 
   function shuffle(array) {
     var arrayCopy = array.slice();
