@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let guessCount = 4;
   let password = '';
 
-  const start = document.getElementById('start');
-  start.addEventListener('click', () => {
-    toggleClasses(document.getElementById('start-screen'), 'hide', 'show');
-    toggleClasses(document.getElementById('game-screen'), 'hide', 'show');
-    startGame();
+  const start = d3.select('#start')
+                  .on('click', () => {
+                    toggleClasses(d3.select('#start-screen'), 'hide', 'show');
+                    toggleClasses(d3.select('#game-screen'), 'hide', 'show');
+                    startGame();
   });
 
   function toggleClasses(element, ...classNames) {
