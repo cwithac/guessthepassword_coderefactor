@@ -19,12 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function startGame() {
     // get random words and append them to the DOM
-    var wordList = document.getElementById("word-list");
+    var wordList = d3.select("#word-list");
     var randomWords = getRandomValues(words, wordCount);
     randomWords.forEach((word) => {
       var li = document.createElement("li");
       li.innerText = word;
-      wordList.appendChild(li);
+      wordList.append('li')
+          .text(word);
     });
 
     // set a secret password and the guess count display
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setGuessCount(guessCount);
 
     // add update listener for clicking on a word
-    wordList.addEventListener('click', updateGame);
+    wordList.on('click', updateGame);
   }
 
   const getRandomValues = (array, numberOfVals=wordCount) => shuffle(array).slice(0, numberOfVals);
