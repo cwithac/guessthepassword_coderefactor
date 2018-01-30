@@ -2,6 +2,12 @@
 
 _Modeled after 'Guess the Password' via Udemy: The Advanced Web Developer Bootcamp_
 
+```
+D3 + ES2015 Updates on Master
+ES2015 Updates on ES2015_Refactor
+Original Starter Code on starter_code
+```
+
 <hr>
 
 [@rithmschool/guess_the_password](https://github.com/rithmschool/guess_the_password)
