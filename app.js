@@ -10,8 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     startGame();
   });
 
-  function toggleClasses(element, ...classNames) {
-    classNames.forEach(name => element.classList.toggle(name));
+  function toggleClasses(selection) {
+    for (let i = 1; i < arguments.length; i++) {
+      const classIsSet = selection.classed(arguments[i]);
+      selection.classed(arguments[i], !classIsSet);
+    }
   }
 
   function startGame() {
