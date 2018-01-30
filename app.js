@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setGuessCount(newCount) {
     guessCount = newCount;
-    document.getElementById("guesses-remaining").innerText = `Guesses remaining: ${guessCount}`;
+    d3.select("#guesses-remaining")
+      .text = `Guesses remaining: ${guessCount}`;
   }
 
   function updateGame(e) {
